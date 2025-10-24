@@ -14,9 +14,8 @@ const Contact: React.FC = () => {
         </div>
         <div className="bg-[#1c1c1c] p-8 rounded-lg shadow-lg border border-gray-800">
           <form 
-            action="mailto:newavemarketing7@gmail.com"
-            method="post"
-            encType="text/plain"
+            action="https://formsubmit.co/newavemarketing7@gmail.com"
+            method="POST"
             className="space-y-6"
           >
             <div>
