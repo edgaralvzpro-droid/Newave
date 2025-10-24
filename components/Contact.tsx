@@ -1,20 +1,6 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 
 const Contact: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically handle form submission, e.g., send data to an API
-    alert(`Gracias, ${name}. Hemos recibido tu mensaje.`);
-    setName('');
-    setEmail('');
-    setMessage('');
-  };
-
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -27,7 +13,12 @@ const Contact: React.FC = () => {
           </p>
         </div>
         <div className="bg-[#1c1c1c] p-8 rounded-lg shadow-lg border border-gray-800">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form 
+            action="mailto:newavemarketing7@gmail.com"
+            method="post"
+            encType="text/plain"
+            className="space-y-6"
+          >
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-400">
                 Nombre Completo
@@ -35,10 +26,8 @@ const Contact: React.FC = () => {
               <div className="mt-1">
                 <input
                   type="text"
-                  name="name"
+                  name="Nombre"
                   id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
                   required
                   className="block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm py-3 px-4 text-white focus:outline-none focus:ring-[#2f81ff] focus:border-[#2f81ff]"
                   placeholder="Tu Nombre"
@@ -52,11 +41,9 @@ const Contact: React.FC = () => {
               <div className="mt-1">
                 <input
                   id="email"
-                  name="email"
+                  name="Email"
                   type="email"
                   autoComplete="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   required
                   className="block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm py-3 px-4 text-white focus:outline-none focus:ring-[#2f81ff] focus:border-[#2f81ff]"
                   placeholder="tu@email.com"
@@ -70,10 +57,8 @@ const Contact: React.FC = () => {
               <div className="mt-1">
                 <textarea
                   id="message"
-                  name="message"
+                  name="Mensaje"
                   rows={4}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
                   required
                   className="block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm py-3 px-4 text-white focus:outline-none focus:ring-[#2f81ff] focus:border-[#2f81ff]"
                   placeholder="Cuéntanos sobre tu proyecto..."

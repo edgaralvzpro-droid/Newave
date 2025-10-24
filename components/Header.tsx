@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Header: React.FC = () => {
@@ -13,10 +12,10 @@ const Header: React.FC = () => {
           </div>
           <div className="hidden md:block">
             <a
-              href="#contact"
+              href="tel:214-516-0957"
               className="px-5 py-3 text-sm font-semibold text-white bg-[#2f81ff] rounded-md shadow-lg hover:bg-[#fe4eee] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2f81ff] focus:ring-offset-[#0f0f0f] transition-all duration-300"
             >
-              Hablemos
+              Llama ya!
             </a>
           </div>
         </div>
