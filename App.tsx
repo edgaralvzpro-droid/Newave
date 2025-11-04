@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -10,13 +9,13 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-[#0f0f0f] min-h-screen">
+    <div className="bg-white min-h-screen">
       <Header />
       <main>
         <Hero />
+        <SocialProof />
         <Services />
         <Philosophy />
-        <SocialProof />
         <Contact />
       </main>
       <Footer />

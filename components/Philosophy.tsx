@@ -1,28 +1,48 @@
-
 import React from 'react';
+
+const Step: React.FC<{ number: string; title: string; description: string; }> = ({ number, title, description }) => (
+    <div className="bg-gray-50/80 p-6 rounded-lg border border-gray-200/60 h-full">
+        <div className="flex items-center gap-4 mb-4">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">
+                {number}
+            </div>
+            <h3 className="text-xl font-black text-gray-900">{title}</h3>
+        </div>
+        <p className="text-gray-600 leading-relaxed">{description}</p>
+    </div>
+);
+
 
 const Philosophy: React.FC = () => {
   return (
-    <section id="philosophy" className="py-20">
+    <section id="philosophy" className="py-24 bg-white">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="lg:w-1/2">
-            <img 
-              src="https://picsum.photos/800/600?grayscale&random=1" 
-              alt="Data analysis charts" 
-              className="rounded-lg shadow-2xl object-cover w-full h-full"
-            />
-          </div>
-          <div className="lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-black text-white uppercase">
-              Datos como <span className="text-[#2f81ff]">Brújula</span>.
-              <br />
-              Creatividad como <span className="text-[#fe4eee]">Motor</span>.
-            </h2>
-            <p className="mt-6 text-lg text-gray-200 leading-relaxed">
-              En Newave, no creemos en las corazonadas. Cada estrategia, cada campaña y cada pieza de contenido nace de un profundo análisis de datos. Usamos la información como nuestra guía para entender a tu audiencia y al mercado. Solo entonces, desatamos nuestra creatividad para construir soluciones que no solo son bellas, sino increíblemente efectivas. No gestionamos anuncios; optimizamos sistemas de crecimiento.
+        <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wider">Nuestro Proceso es Simple y Transparente</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+                Trabajamos contigo, paso a paso, para lograr tus objetivos.
             </p>
-          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <Step 
+            number="1" 
+            title="Entendemos tu Negocio" 
+            description="Todo empieza con una conversación. Queremos conocer tu negocio, tus clientes y tus metas. No creemos en soluciones genéricas; tu estrategia debe ser tan única como tu trabajo."
+          />
+
+          <Step 
+            number="2" 
+            title="Creamos un Plan a tu Medida" 
+            description="Basados en lo que hablamos, diseñamos un plan de acción claro y enfocado. Te explicaremos exactamente qué haremos para que siempre sepas en qué se invierte tu dinero."
+          />
+
+          <Step 
+            number="3" 
+            title="Te Mostramos Resultados" 
+            description="Te enviaremos reportes fáciles de entender que te muestran cómo va el trabajo: cuántas personas te contactaron, visitaron tu web y cómo crece tu presencia en línea."
+          />
+          
         </div>
       </div>
     </section>
